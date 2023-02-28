@@ -1,7 +1,5 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import Loading from '../../components/Loading';
 import useMutation from '../../hooks/useMutation';
 import { useAppDispatch } from '../../redux/store';
 

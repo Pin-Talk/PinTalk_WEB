@@ -1,5 +1,6 @@
-import LoginForm from '../../components/login/LoginForm';
+import React from 'react';
 import LoginLayout from '../../components/login/LoginLayout';
+import LoginForm from '../../components/login/LoginForm';
 
 const Login = () => {
   return (
