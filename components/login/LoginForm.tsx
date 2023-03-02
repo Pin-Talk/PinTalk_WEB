@@ -26,7 +26,7 @@ const LoginForm = () => {
   };
 
   const onForgotAccount = () => {
-    router.push('/forgot-account');
+    router.push('/login/forgot-account');
   };
 
   const openWindow = () => {

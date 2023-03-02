@@ -1,4 +1,5 @@
 const logo = require('../../public/asset/logo/pinbank_icon.png');
+import Image from 'next/image';
 import React from 'react';
 import useWindowSize from '../../hooks/useWindowSize';
 import SubNavbar from './SubNavbar';
@@ -34,7 +35,7 @@ const Header = () => {
             금융을 내편으로
           </h1>
           <div className="flex items-end animate-slowFadeEffect">
-            <img className="w-12 xl:w-16" src={logo} alt="logo" />
+            <Image className="w-12 xl:w-16" src={logo} alt="logo" />
             <div className="flex items-center text-black text-2xl  sm:text-xl xl:text-4xl font-extrabold">
               <span className="uppercase mr-1">intalk</span>
               <span>에서 쉽고 간편하게</span>
