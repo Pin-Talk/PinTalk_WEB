@@ -1,12 +1,12 @@
-import { useNavigate } from "react-router-dom";
-
-import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineClose } from "react-icons/ai";
-import useWindowSize from "../../../hooks/useWindowSize";
-import { navbarsMain } from "../../../data/navbar/navbars";
-import NavDropdown from "./NavDropdown";
-import MainLogo from "../MainLogo";
-import { useEffect, useState } from "react";
+import React from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { AiOutlineClose } from 'react-icons/ai';
+import useWindowSize from '../../../hooks/useWindowSize';
+import { navbarsMain } from '../../../data/navbar/navbars';
+import NavDropdown from './NavDropdown';
+import MainLogo from '../MainLogo';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 interface Props {
   title?: string;
@@ -15,10 +15,10 @@ interface Props {
 const Navbar = ({ title }: Props) => {
   const [isActive, setIsActive] = useState(false);
   const { smallWindowSize } = useWindowSize();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const onPage = (navId?: string) => {
-    navigate(`/${navId}`);
+    router.push(`/${navId}`);
   };
 
   const handleDropDown = () => {

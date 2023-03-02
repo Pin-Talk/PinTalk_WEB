@@ -1,11 +1,11 @@
-import { useParams } from "react-router-dom";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import UserInfoData from "./UserInfoData";
-import { UserInfo } from "../../../model/interface/userList";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import UserInfoData from './UserInfoData';
+import { UserInfo } from '../../../model/interface/userList';
+import { useRouter } from 'next/router';
 
 const UserMemberDetail = () => {
-  const { id } = useParams();
+  const { id } = useRouter().query;
   const [userInfo, UpdateInfo] = useState<UserInfo[]>([]);
 
   useEffect(() => {

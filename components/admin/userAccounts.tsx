@@ -1,4 +1,5 @@
-import { AccountInfo } from "../../model/interface/accountList";
+import React from 'react';
+import { AccountInfo } from '../../model/interface/accountList';
 
 interface Props {
   account?: AccountInfo;
@@ -22,7 +23,7 @@ const UserAccounts = ({ account }: Props) => {
     >
       <td className="p-3 text-sm whitespace-nowrap">{account?.holderName}</td>
       <td className="p-3 text-sm whitespace-nowrap">
-        {account?.holderType === "P" ? "개인" : "법인"}
+        {account?.holderType === 'P' ? '개인' : '법인'}
       </td>
       <td className="p-3 text-sm whitespace-nowrap">{account?.accountAlias}</td>
       <td className="p-3 text-sm whitespace-nowrap">{account?.accountBalance}</td>
@@ -31,10 +32,10 @@ const UserAccounts = ({ account }: Props) => {
       <td className="p-3 text-sm whitespace-nowrap">
         {
           {
-            "1": "수시입출금",
-            "2": "예적금",
-            "6": "수익증권",
-            T: "종합계좌",
+            '1': '수시입출금',
+            '2': '예적금',
+            '6': '수익증권',
+            T: '종합계좌',
           }[account_Type!]
         }
       </td>

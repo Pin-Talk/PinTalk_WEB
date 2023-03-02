@@ -8,10 +8,10 @@
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^29.4.0",
-    "@types/node": "^18.11.19",
-    "@types/react": "^18.0.27",
+    "@types/node": "^18.14.3",
+    "@types/react": "^18.0.28",
     "@types/react-datepicker": "^4.8.0",
-    "@types/react-dom": "^18.0.10",
+    "@types/react-dom": "^18.0.11",
     "date-fns": "^2.29.3",
     "http-proxy-middleware": "^2.0.6",
     "lodash": "^4.17.21",
@@ -23,18 +23,16 @@
     "react-hook-form": "^7.41.2",
     "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.6.0",
-    "react-scripts": "5.0.1",
     "redux": "^4.2.0",
     "tailwind-scrollbar-hide": "^1.1.7",
+    "typescript": "^4.9.5",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
     "dev": "next dev",
-    "start": "next start",
     "build": "next build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "next start",
+    "lint": "next lint"
   },
   "eslintConfig": {
     "extends": [
@@ -70,7 +68,6 @@
     "postcss": "^8.4.20",
     "prettier": "2.8.1",
     "tailwindcss": "^3.2.4",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.9.5"
+    "ts-node": "^10.9.1"
   }
 }

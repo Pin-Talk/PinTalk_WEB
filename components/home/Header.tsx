@@ -1,25 +1,26 @@
-import logo from "../../asset/pinbank_icon.png";
-import useWindowSize from "../../hooks/useWindowSize";
-import SubNavbar from "./SubNavbar";
-const mainUrl = "https://ifh.cc/g/SwrsvO.png";
+const logo = require('../../public/asset/logo/pinbank_icon.png');
+import React from 'react';
+import useWindowSize from '../../hooks/useWindowSize';
+import SubNavbar from './SubNavbar';
+const mainUrl = 'https://ifh.cc/g/SwrsvO.png';
 
 export interface HeaderNavs {
-  title: "계좌조회" | "계좌이체" | "이체내역";
-  id: "allAccount" | "transfer" | "transferList";
+  title: '계좌조회' | '계좌이체' | '이체내역';
+  id: 'allAccount' | 'transfer' | 'transferList';
 }
 
 const subNavbar: HeaderNavs[] = [
   {
-    title: "계좌조회",
-    id: "allAccount",
+    title: '계좌조회',
+    id: 'allAccount',
   },
   {
-    title: "계좌이체",
-    id: "transfer",
+    title: '계좌이체',
+    id: 'transfer',
   },
   {
-    title: "이체내역",
-    id: "transferList",
+    title: '이체내역',
+    id: 'transferList',
   },
 ];
 

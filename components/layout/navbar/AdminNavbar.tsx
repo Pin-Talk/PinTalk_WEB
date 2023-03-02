@@ -1,11 +1,11 @@
-import { GiHamburgerMenu } from "react-icons/gi";
-import { AiOutlineClose } from "react-icons/ai";
-import { useState } from "react";
+import React from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { AiOutlineClose } from 'react-icons/ai';
+import { useState } from 'react';
+import { navbarsAdmin } from '../../../data/navbar/navbars';
 
-import { Link } from "react-router-dom";
-import { navbarsAdmin } from "../../../data/navbar/navbars";
-
-import SideNavbar from "./sideNavbar/SideNavbar";
+import SideNavbar from './sideNavbar/SideNavbar';
+import Link from 'next/link';
 
 interface Props {
   title: string;
@@ -31,12 +31,12 @@ const AdminNavbar = ({ title }: Props) => {
         </div>
         <span className="inline-block p-2 font-bold text-xl">{title}</span>
         <div className="space-x-6 absolute right-10 flex items-center">
-          <Link to="/admin">
+          <Link href="/admin">
             <button className="bg-amber-500 text-white rounded-md px-2 hover:bg-amber-600 transition-all cursor-pointer">
               관리자 홈
             </button>
           </Link>
-          <Link to="/">
+          <Link href="/">
             <button className="bg-amber-500 text-white rounded-md px-2 hover:bg-amber-600 transition-all cursor-pointer">
               홈
             </button>

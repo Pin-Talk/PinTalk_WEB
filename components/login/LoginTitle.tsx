@@ -1,4 +1,5 @@
-const logo = require("../../asset/pinbank_icon.png");
+import React from 'react';
+const logo = require('../../asset/pinbank_icon.png');
 
 interface Props {
   title: string;

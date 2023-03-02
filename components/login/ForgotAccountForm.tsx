@@ -1,6 +1,7 @@
-import LoginInput from "./LoginInput";
-import LoginButton from "./LoginButton";
-import { useForm } from "react-hook-form";
+import React from 'react';
+import LoginInput from './LoginInput';
+import LoginButton from './LoginButton';
+import { useForm } from 'react-hook-form';
 
 interface Props {
   buttonTitle?: string;
@@ -24,13 +25,13 @@ const ForgotAccountForm = ({ buttonTitle }: Props) => {
 
   return (
     <form onSubmit={handleSubmit(onValid)}>
-      {buttonTitle === "id" ? (
+      {buttonTitle === 'id' ? (
         <div>
           <div className="flex flex-col">
             <LoginInput
               htmlFor="id"
-              register={register("id", {
-                required: "아이디를 입력해주세요.",
+              register={register('id', {
+                required: '아이디를 입력해주세요.',
               })}
             />
             <LoginButton isValid={isValid} title="아이디 찾기" />
@@ -39,8 +40,8 @@ const ForgotAccountForm = ({ buttonTitle }: Props) => {
       ) : (
         <div className="flex flex-col">
           <LoginInput
-            register={register("password", {
-              required: "비밀번호를 입력해주세요.",
+            register={register('password', {
+              required: '비밀번호를 입력해주세요.',
             })}
             htmlFor="password"
             type="password"

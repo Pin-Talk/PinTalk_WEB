@@ -1,6 +1,4 @@
-import Sidebar from "./Sidebar";
-import searchIcon from "../../../asset/functionIcon/search.png";
-import PinBankLogo from "../../../asset/pinbank_icon.png";
+import Sidebar from './Sidebar';
 
 const UserAccounts = () => {
   return (
@@ -9,7 +7,6 @@ const UserAccounts = () => {
         <Sidebar></Sidebar>
         <div className="pl-6 pr-6 pt-6 mb-12 w-full">
           <div className="flex">
-            <img className="object-contain h-10 pr-2 w-10 flex" src={searchIcon}></img>
             <h1 className="text-2xl py-1 pl-1 text-pintalk-dark-brown text-semibold">
               회원 상세 정보
             </h1>

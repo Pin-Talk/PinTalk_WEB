@@ -1,9 +1,12 @@
+import React from 'react';
+import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
-import { useNavigate, Link } from 'react-router-dom';
+
 import { openNewWindow } from '../../utils/openNewWindow';
 import LoginButton from './LoginButton';
 import LoginInput from './LoginInput';
 import LoginTitle from './LoginTitle';
+import Link from 'next/link';
 
 interface LoginFormData {
   id: string;
@@ -11,7 +14,7 @@ interface LoginFormData {
 }
 
 const LoginForm = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -23,7 +26,7 @@ const LoginForm = () => {
   };
 
   const onForgotAccount = () => {
-    navigate('/forgot-account');
+    router.push('/forgot-account');
   };
 
   const openWindow = () => {
@@ -34,7 +37,7 @@ const LoginForm = () => {
 
   return (
     <div>
-      <Link to="/">
+      <Link href="/">
         <span className="text-amber-600 hover:text-amber-500 cursor-pointer p-1 font-bold">
           홈으로 가기
         </span>

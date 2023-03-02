@@ -1,10 +1,10 @@
+import { useRouter } from 'next/router';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const NotFound = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const onHomepage = () => {
-    navigate('/');
+    router.push('/');
   };
   return (
     <div className="h-screen bg-gray-700 flex flex-col items-center justify-center">

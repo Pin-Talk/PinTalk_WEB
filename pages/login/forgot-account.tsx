@@ -4,8 +4,9 @@ import LoginLayout from '../../components/login/LoginLayout';
 import ForgotAccountTitle from '../../components/login/ForgotAccountTitle';
 import LoginTitle from '../../components/login/LoginTitle';
 import ForgotAccountForm from '../../components/login/ForgotAccountForm';
+import { NextPage } from 'next';
 
-const ForgotAccount = () => {
+const ForgotAccount: NextPage = () => {
   const [buttonTitle, setButtonTittle] = useState('id');
 
   const handleForgotAccountTitle = (e: React.MouseEvent<HTMLElement>) => {

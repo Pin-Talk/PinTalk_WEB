@@ -1,4 +1,5 @@
-import cls from "../../utils/cls";
+import React from 'react';
+import cls from '../../utils/cls';
 
 interface Props {
   title: string;
@@ -10,8 +11,8 @@ const LoginButton = ({ title, isValid }: Props) => {
     <button
       disabled={!isValid}
       className={cls(
-        "w-full bg-amber-600 text-white p-1 text-lg font-bold flex justify-center items-center rounded-lg ",
-        isValid ? "hover:bg-amber-500 transition-all cursor-pointer" : "opacity-40",
+        'w-full bg-amber-600 text-white p-1 text-lg font-bold flex justify-center items-center rounded-lg ',
+        isValid ? 'hover:bg-amber-500 transition-all cursor-pointer' : 'opacity-40',
       )}
     >
       {title}

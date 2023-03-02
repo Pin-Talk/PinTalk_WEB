@@ -1,8 +1,9 @@
-import { NavItem } from "../../../../data/navbar/navbars";
-import cls from "../../../../utils/cls";
-import SideSubNavs from "./SideSubNavs";
-import useOnClickOutside from "../../../../hooks/useOnClickOutside";
-import { useRef } from "react";
+import React from 'react';
+import { NavItem } from '../../../../data/navbar/navbars';
+import cls from '../../../../utils/cls';
+import SideSubNavs from './SideSubNavs';
+import useOnClickOutside from '../../../../hooks/useOnClickOutside';
+import { useRef } from 'react';
 
 interface Props {
   active: boolean;
@@ -16,8 +17,8 @@ const SideNavbar = ({ active, navItems, handleOutsideClick }: Props) => {
   return (
     <div
       className={cls(
-        active ? "scale-x-100" : "scale-x-0",
-        "fixed origin-bottom-left top-[70px] w-full z-50 transition-all",
+        active ? 'scale-x-100' : 'scale-x-0',
+        'fixed origin-bottom-left top-[70px] w-full z-50 transition-all',
       )}
     >
       <ul

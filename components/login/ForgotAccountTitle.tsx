@@ -1,6 +1,6 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import cls from "../../utils/cls";
+import { useRouter } from 'next/router';
+import React from 'react';
+import cls from '../../utils/cls';
 
 interface Props {
   handleTitle: (e: React.MouseEvent<HTMLButtonElement>) => void;
@@ -9,19 +9,19 @@ interface Props {
 
 const forgotAccountTitles = [
   {
-    title: "아이디",
-    id: "id",
+    title: '아이디',
+    id: 'id',
   },
   {
-    title: "비밀번호",
-    id: "password",
+    title: '비밀번호',
+    id: 'password',
   },
 ];
 
 const ForgotAccountTitle = ({ handleTitle, buttonTitle }: Props) => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const onLogin = () => {
-    navigate("/login");
+    router.push('/login');
   };
 
   return (
@@ -32,10 +32,10 @@ const ForgotAccountTitle = ({ handleTitle, buttonTitle }: Props) => {
             key={item.id}
             onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleTitle(e)}
             className={cls(
-              "h-full w-20  bg-pintalk-dark-yellow transition-all",
+              'h-full w-20  bg-pintalk-dark-yellow transition-all',
               item.id === buttonTitle
-                ? " text-white font-bold"
-                : "opacity-50 text-white text-opacity-90",
+                ? ' text-white font-bold'
+                : 'opacity-50 text-white text-opacity-90',
             )}
           >
             {item.title}

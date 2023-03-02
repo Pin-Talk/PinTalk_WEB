@@ -1,3 +1,4 @@
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import CommonInput from '../shareInputs/CommonInput';
 import Gender from '../shareInputs/Gender';
@@ -8,20 +9,20 @@ import ValidateForm, { NUMBER, NUMBER_ENGLISH } from '../../utils/validateForm';
 import Password from '../shareInputs/Password';
 import useMutation from '../../hooks/useMutation';
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 import Loading from '../Loading';
 import useAddress from '../../hooks/useAddress';
 import { UserSubmitData } from '../../model/interface/userList';
 import axios from 'axios';
 import { openNewWindow } from '../../utils/openNewWindow';
+import { useRouter } from 'next/router';
 
 const validateForm = new ValidateForm();
 const RegisterForm = () => {
   const [valid, setValid] = useState(false);
   const { error, loading, mutation, data } = useMutation('/userMemberInsert');
   const { address, handleAddress } = useAddress();
-  const navigate = useNavigate();
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -65,7 +66,7 @@ const RegisterForm = () => {
 
   useEffect(() => {
     if (data) {
-      navigate('/admin');
+      router.push('/admin');
       window.close();
     }
     if (data === false) {
